@@ -44,7 +44,11 @@
 
 
 #Filtering
-{{ name|upper }} #all upper only 
-{{ name|lower }} #all lower only
-{{ text|truncatewords:10 }} #first 10 word only += ...
-{{ text|truncatexhars:10 }} #first 10 chars only += ...
+{{ name|upper }}
+#makes all in uppercase  
+{{ name|lower }}
+#makes all in lowercase
+{{ text|truncatewords:10 }} 
+#returns first 10 word only += ...
+{{ text|truncatexhars:10 }}
+#returns first 10 chars only += ...
