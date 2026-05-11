@@ -1,43 +1,53 @@
-#With widget we control what html element gonna be our form field
+# With widget we control what HTML element is used for the form field
 
-#this is out arg of form field
-#defining a widget 
-form_field = forms.FormField(widget=forms.WidgetName())
+# Field decides WHAT data + validation
+# Widget decides HOW UI looks (HTML only, not validation)
 
-'Field decides WHAT data and Widget decides HOW UI looks dont validates data much'
-#some widget to use 
-forms.TextInput()       
-# normal single line input box
+# Correct usage
+field_name = forms.CharField(widget=forms.TextInput())
 
-forms.EmailInput()      
-# email input (HTML email type)
 
-forms.NumberInput()    
-# number input (HTML number type)
+# -------------------------
+# COMMON WIDGETS (Django)
+# -------------------------
 
-forms.PasswordInput()     
-# hidden password input
+forms.TextInput(attrs=None)
+# single line text input
 
-forms.Textarea()      
-# big multiline text box
+forms.EmailInput(attrs=None)
+# email input (type="email")
 
-forms.Select()      
-# dropdown select box used with Choiceinput
+forms.NumberInput(attrs=None)
+# number input (type="number")
 
-forms.CheckboxInput()  
+forms.PasswordInput(attrs=None, render_value=False)
+# password field (hidden text)
+
+forms.Textarea(attrs=None)
+# multiline text area
+
+forms.Select(attrs=None, choices=())
+# dropdown select (needs choices)
+
+forms.CheckboxInput(attrs=None)
 # single checkbox
 
-forms.FileInput()     
+forms.FileInput(attrs=None)
 # file upload input
 
-forms.DateInput()       
-# date picker
+forms.DateInput(attrs=None, format=None)
+# date picker input
 
-forms.DateTimeInput()   
-# date + time picker
+forms.DateTimeInput(attrs=None, format=None)
+# date + time input
 
-#we can also set html elements attribute with widget arg 
+
+# -------------------------
+# HTML ATTRIBUTES (IMPORTANT)
+# -------------------------
+
 widget=forms.TextInput(attrs={
     "placeholder": "Enter your name",
-    "class": "form-control"
+    "class": "form-control",
+    "id": "main_post"
 })

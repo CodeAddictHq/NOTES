@@ -1,4 +1,4 @@
-#Form feilds are used rp valodate data
+#Form feilds are used to valodate data
 
 #Core usages
 1.CharField(max_length=int)
