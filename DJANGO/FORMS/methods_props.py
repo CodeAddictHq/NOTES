@@ -22,6 +22,7 @@
 #fills existing datas of that object from db 
 
 --- only for model form ---
+
 7.obj.save()
 #Saves object in db  with this and updates existing one 
 

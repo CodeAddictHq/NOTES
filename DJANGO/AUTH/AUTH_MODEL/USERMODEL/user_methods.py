@@ -1,7 +1,7 @@
 #There is some usefull methods wuth user model (Thats the benifit)
 
 1.user.set_password("str")
-#sets new users pass
+#sets new hashed users pass
 
 2.user.check_password("str")
 #returns True if pass is correct 

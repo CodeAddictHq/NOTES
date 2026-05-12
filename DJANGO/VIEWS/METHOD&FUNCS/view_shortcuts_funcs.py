@@ -89,7 +89,7 @@ Convert URL name → actual URL string. Used to avoid hardcoding URLs. for prett
 
 12. reverse_lazy("url_name")
 """
-Same as reverse(), but evaluated lazily.
+Same as reverse(), but excutes when code runs.
 Used in:class-based views
 settings files
 """
